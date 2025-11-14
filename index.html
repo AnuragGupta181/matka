@@ -5,8 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sky Matka Group — Play & Win</title>
 
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="public/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="public/favicon.ico" type="image/x-icon">
 
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
@@ -17,8 +17,8 @@
   <!-- HERO -->
   <header>
     <div class="container">
-      <div class="logo-circle" aria-hidden="true">
-        <img src="./logo.png" alt="logo" width="120" height="120">
+      <div class="logo-box" aria-hidden="true">
+        <img src="public/logo.png" alt="logo" width="120" height="120">
       </div>
 
       <h1>WELCOME TO SKY MATKA GROUP</h1>
@@ -31,23 +31,23 @@
 
       <div>
         <div class="bonus-pill">
-          <div style="font-size:27px; font-style:italic; padding-left: 15px; padding-right: 15px; color:rgb(7, 29, 88)">50₹</div>
+          <div class="bonus-value">50₹</div>
           <div class="amount">Welcome Bonus</div>
-          <div class="muted" style="font-size:14px">On your first deposit</div>
+          <div class="muted small">On your first deposit</div>
         </div>
       </div>
 
       <div class="cta-row">
-        <!-- download buttons use data attrs and JS will set final href depending on device -->
-        
+        <a class="btn secondary" href="#contact"><img src="public/contac.png" alt="contact" width="25" height="25"> Contact Us</a>
 
-        <a class="btn secondary" href="#contact"><img src="contac.png" alt="contact" width="25" height="25">  Contact Us</a>
+        <!-- All downloads point to the same APK inside /public -->
+        <a class="btn download-btn" style="font-size:25px;" data-local="public/sky_matka.apk" id="hero-download">
+          <img src="public/download.png" alt="download" width="40" height="40"> Download App
+        </a>
 
-        <a class="btn download-btn"style="font-size:25px;" data-local="./sky_matka.apk" id="hero-download"><img src="download.png" alt="download" width="40" height="40">        Download App</a>
-
-        <!-- WhatsApp: direct wa.me -->
+        <!-- WhatsApp -->
         <a class="btn whatsapp" href="https://wa.me/9376462470" rel="noopener" id="hero-whatsapp">
-          <img src="./what.png" alt="WhatsApp" style="border-radius:4px" width="20" height="20" aria-hidden="true"> WhatsApp
+          <img src="public/what.png" alt="WhatsApp" width="20" height="20" aria-hidden="true"> WhatsApp
         </a>
       </div>
 
@@ -86,19 +86,19 @@
           </div>
 
           <div class="rate-row" role="listitem">
-            <div class="rate-type">Singal Panel</div>
+            <div class="rate-type">Single Panel</div>
             <div class="rate-amount center">10</div>
             <div class="rate-amount center">1400 / --</div>
           </div>
 
           <div class="rate-row" role="listitem">
-            <div class="rate-type">Dubble Panel</div>
+            <div class="rate-type">Double Panel</div>
             <div class="rate-amount center">10</div>
             <div class="rate-amount center">2800 / --</div>
           </div>
 
           <div class="rate-row" role="listitem">
-            <div class="rate-type">Tripple Panel</div>
+            <div class="rate-type">Triple Panel</div>
             <div class="rate-amount center">10</div>
             <div class="rate-amount center">7000 / --</div>
           </div>
@@ -120,9 +120,8 @@
       </div>
 
       <div class="big-cta">
-        <!-- these two also become download triggers (Start Playing -> same download behaviour) -->
-        <a class="btn download-btn" data-local="./matka.apk" data-remote="https://skymatka.online/redirect-play-store" id="rates-download">▶ Start Playing Now</a>
-        <a class="btn secondary" href="#contact"><img src="contac.png" alt="contact" width="25" height="25"> Contact Support</a>
+        <a class="btn download-btn" data-local="public/sky_matka.apk" id="rates-download">▶ Start Playing Now</a>
+        <a class="btn secondary" href="#contact"><img src="public/contac.png" alt="contact" width="25" height="25"> Contact Support</a>
       </div>
     </div>
   </section>
@@ -134,10 +133,29 @@
       <div class="subtitle">Why players trust Sky Matka Group</div>
 
       <div class="features-grid">
-        <div class="feature"><div class="icon"><img src="lock.png" alt="Secure Platform" width="70" height="70"></div><h4>Secure Platform</h4><p>Bank-grade security for transactions.</p></div>
-        <div class="feature"><div class="icon"><img src="result.png" alt="instantly reslts" width="70" height="70"></div><h4>Instant Results</h4><p>Real-time updates and payouts.</p></div>
-        <div class="feature"><div class="icon"><img src="chat.png" alt="chatting" width="70" height="70"></div><h4>24/7 Support</h4><p>Round-the-clock help.</p></div>
-        <div class="feature"><div class="icon"><img src="phone.png" alt="Mobile First" width="70" height="70"></div><h4>Mobile First</h4><p>Optimized for best experience.</p></div>
+        <div class="feature">
+          <div class="icon"><img src="public/lock.png" alt="Secure Platform" width="70" height="70"></div>
+          <h4>Secure Platform</h4>
+          <p>Bank-grade security for transactions.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon"><img src="public/result.png" alt="Instant Results" width="70" height="70"></div>
+          <h4>Instant Results</h4>
+          <p>Real-time updates and payouts.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon"><img src="public/chat.png" alt="24/7 Support" width="70" height="70"></div>
+          <h4>24/7 Support</h4>
+          <p>Round-the-clock help.</p>
+        </div>
+
+        <div class="feature">
+          <div class="icon"><img src="public/phone.png" alt="Mobile First" width="70" height="70"></div>
+          <h4>Mobile First</h4>
+          <p>Optimized for best experience.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -149,18 +167,35 @@
       <div class="subtitle">Start your gaming journey in 3 steps</div>
 
       <div class="steps">
-        <div class="step"><div class="num">1</div><div class="step-title">Download App</div><p class="muted">Download and install our secure app.</p></div>
-        <div class="step"><div class="num">2</div><div class="step-title">Create Account</div><p class="muted">Register quickly & safely.</p></div>
-        <div class="step"><div class="num">3</div><div class="step-title">Start Playing</div><p class="muted">Choose a panel & win instantly.</p></div>
+        <div class="step">
+          <div class="num">1</div>
+          <div class="step-title">Download App</div>
+          <p class="muted">Download and install our secure app.</p>
+        </div>
+
+        <div class="step">
+          <div class="num">2</div>
+          <div class="step-title">Create Account</div>
+          <p class="muted">Register quickly & safely.</p>
+        </div>
+
+        <div class="step">
+          <div class="num">3</div>
+          <div class="step-title">Start Playing</div>
+          <p class="muted">Choose a panel & win instantly.</p>
+        </div>
       </div>
 
       <div class="cta-row">
-        
-        <a class="btn secondary" href="#contact"><img src="contac.png" alt="contact" width="20" height="20"> Contact Us</a>
+        <a class="btn secondary" href="#contact"><img src="public/contac.png" alt="contact" width="20" height="20"> Contact Us</a>
 
-        <a class="btn download-btn" style="font-size:25px;"  data-local="./matka.apk" data-remote="https://skymatka.online/redirect-play-store"><img src="images-removebg-preview.png" alt="Download" width="40" height="40">Download Now</a>
+        <a class="btn download-btn" style="font-size:25px;" data-local="public/sky_matka.apk">
+          <img src="public/images-removebg-preview.png" alt="Download" width="40" height="40"> Download Now
+        </a>
 
-        <a class="btn ghost whatsapp" href="https://wa.me/9376462470"><img src="./what.png" alt="WhatsApp" width="30" height="30" aria-hidden="true" style="border-radius:4px"> WhatsApp</a>
+        <a class="btn ghost whatsapp" href="https://wa.me/9376462470">
+          <img src="public/what.png" alt="WhatsApp" width="30" height="30" aria-hidden="true"> WhatsApp
+        </a>
       </div>
     </div>
   </section>
@@ -182,7 +217,7 @@
   <footer>
     <div class="container foot-inner">
       <div class="footer-logo" aria-hidden="true">
-        <img src="./logo.png" alt="logo" width="70" height="70">
+        <img src="public/logo.png" alt="logo" width="70" height="70">
       </div>
       <small>© <span id="year"></span> Sky Matka Group. All rights reserved.</small>
     </div>

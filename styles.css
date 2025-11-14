@@ -1,5 +1,5 @@
 /* ============================
-   Styles — updated final
+   Styles — final integrated
    ============================ */
 
 :root{
@@ -30,7 +30,6 @@ body{
    HERO
    ---------------------------- */
 header{
-  /* strong dark gradient, top -> bottom (0deg per spec) */
   background: linear-gradient(0deg, var(--royal-hex) 0%, var(--royal-dark) 100%);
   padding:72px 0 48px;
   text-align:center;
@@ -38,24 +37,24 @@ header{
   overflow:hidden;
 }
 
-/* logo */
-.logo-circle{width:120px;height:120px;border-radius:999px;background:rgba(255,255,255,0.06);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,0.12)}
-.logo-circle img{width:84px;height:84px;object-fit:contain}
+/* logo (square with 12px radius) */
+.logo-box{width:120px;height:120px;border-radius:12px;background:rgba(255,255,255,0.06);margin:0 auto 12px;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 28px rgba(0,0,0,0.12)}
+.logo-box img{width:84px;height:84px;object-fit:contain;display:block}
 
 /* headings */
 h1{font-family:"Playfair Display",serif;font-weight:700;font-size:52px;margin:8px 0;color:var(--ivory);letter-spacing:-1px;line-height:1}
 .tag{color:var(--ivory);font-weight:700;letter-spacing:1.6px;margin-top:8px}
-.hero-sub{max-width:820px;margin:10px auto 12px;color:rgba(255,255,255,0.75);font-size:18px}
+.hero-sub{max-width:820px;margin:10px auto 12px;color:rgba(255,255,255,0.85);font-size:18px}
 
 /* bonus pill */
 .bonus-pill{display:inline-flex;align-items:center;gap:12px;background:linear-gradient(90deg,#fff7e0,#fff3d6);border:1px solid rgba(255,255,255,0.06);padding:10px 16px;border-radius:34px;box-shadow:0 10px 30px rgba(0,0,0,0.12);margin:10px 0;font-weight:700;color:var(--royal-hex)}
+.bonus-value{font-size:27px;font-style:italic;padding:0 12px;color:rgb(7,29,88)}
 .bonus-pill .amount{background:var(--royal-hex);color:white;padding:6px 12px;border-radius:18px;font-weight:800;font-size:15px}
+.small{font-size:14px}
 
 /* ----------------------------
    CTA Buttons (global but hero variations)
    ---------------------------- */
-
-/* default (non-hero) btns */
 .btn{
   display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border-radius:10px;background:var(--royal-hex);color:white;border:0;font-weight:700;text-decoration:none;cursor:pointer;box-shadow:0 8px 20px rgba(43,82,136,0.08);transition:transform .16s cubic-bezier(.2,.9,.3,1),box-shadow .16s ease;
 }
@@ -74,24 +73,23 @@ header .btn.secondary{
   color: var(--ivory);
 }
 
-/* ghost (e.g., whatsapp) keep brand */
+/* WhatsApp / ghost variations */
 header .btn.ghost,
 header .btn.whatsapp{
   background: #25D366;
   color: #fff;
   border: 0;
+  border-radius:8px; /* smaller radius per spec */
 }
 
 .btn:hover{transform:scale(1.05)}
 .btn:active{transform:translateY(1px) scale(1.03)}
 
-/* info pill below */
+/* info pill */
 .info-pill{margin:24px auto 0;display:flex;gap:22px;align-items:center;justify-content:center;padding:14px 18px;background:rgba(255,255,255,0.04);border-radius:40px;max-width:900px}
 .info-item{display:flex;align-items:center;gap:10px;color:rgba(255,255,255,0.92);font-weight:700}
 
-/* ----------------------------
-   CTA ROW: responsive grid (3 / 2 / 1)
-   ---------------------------- */
+/* CTA ROW: responsive grid (3 / 2 / 1) */
 .cta-row{
   display:grid;
   grid-template-columns: repeat(3, auto);
@@ -112,9 +110,9 @@ header .btn.whatsapp{
 /* ----------------------------
    SECTIONS / TITLES
    ---------------------------- */
-.section{padding:64px 0}
+.section{padding:60px 0} /* Even medium padding (chosen) */
 .section .title{text-align:center;margin-bottom:8px;font-family:"Playfair Display",serif;font-size:36px;color:var(--royal-hex)}
-.section .subtitle{text-align:center;color:rgba(35,35,35,0.6);margin-bottom:28px}
+.section .subtitle{text-align:center;color:rgba(35,35,35,0.6);margin-bottom:24px}
 
 /* ----------------------------
    RATES CARD (keep 3 columns always)
@@ -159,7 +157,7 @@ header .btn.whatsapp{
 .big-cta{margin:34px auto 18px;display:flex;justify-content:center;gap:14px}
 .big-cta .btn{padding:12px 22px;border-radius:12px;font-size:15px}
 
-/* footer updated: solid royal background and white circular logo badge */
+/* footer: square logo with 12px radius, tightened spacing */
 footer{
   background: var(--royal-hex);
   padding:38px 0;
@@ -169,7 +167,7 @@ footer .foot-inner{display:flex;align-items:center;justify-content:center;gap:14
 footer small{color:rgba(255,255,255,0.9)}
 
 .footer-logo{
-  width:92px;height:92px;border-radius:999px;background:rgba(255,255,255,0.92);display:flex;align-items:center;justify-content:center;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,0.12)
+  width:92px;height:92px;border-radius:12px;background:rgba(255,255,255,0.92);display:flex;align-items:center;justify-content:center;padding:6px;box-shadow:0 8px 24px rgba(0,0,0,0.12)
 }
 .footer-logo img{width:70px;height:70px;object-fit:contain}
 
@@ -191,6 +189,6 @@ footer small{color:rgba(255,255,255,0.9)}
   .steps{grid-template-columns:1fr}
   .hero-sub{font-size:16px;padding:0 18px}
   h1{font-size:36px}
-  .logo-circle{width:96px;height:96px}
+  .logo-box{width:96px;height:96px}
   .bonus-pill{padding:10px 14px}
 }
