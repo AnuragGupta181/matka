@@ -84,14 +84,14 @@ document.addEventListener('DOMContentLoaded', function(){
     a.setAttribute('target','_blank');
     a.setAttribute('rel','noopener');
     if(!a.href || a.href === '#'){
-      a.href = 'https://wa.me/9950568613';
+      a.href = 'https://wa.me/9376462470';
     }
   });
 
   var phoneLinks = document.querySelectorAll('a[href^="tel:"], .link-phone');
   // ensure the phone anchor has correct tel
   var phoneAnchor = document.querySelector('.link-phone');
-  if(phoneAnchor) phoneAnchor.setAttribute('href','tel:9950568613');
+  if(phoneAnchor) phoneAnchor.setAttribute('href','tel:9376462470');
 
   // DOWNLOAD BUTTONS — hybrid logic:
   // Desktop => local ./matka.apk (direct download)
