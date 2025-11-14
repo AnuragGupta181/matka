@@ -5,9 +5,8 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Sky Matka Group — Play & Win</title>
 
-  <!-- Fonts: royal heading + clean body -->
+  <!-- Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,22 +15,16 @@
   <header>
     <div class="container">
       <div class="logo-circle" aria-hidden="true">
-        <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="logo">
-          <defs>
-            <linearGradient id="g1" x1="0" x2="1">
-              <stop offset="0" stop-color="#2B5288"/>
-              <stop offset="1" stop-color="#376B9E"/>
-            </linearGradient>
-          </defs>
-          <rect x="6" y="6" width="52" height="52" rx="10" fill="url(#g1)"/>
-          <path d="M20 40c5-8 24-8 28 0" fill="none" stroke="#FFFCEF" stroke-width="3" stroke-linecap="round"/>
-          <circle cx="32" cy="24" r="8" fill="#FFFCEF"/>
-        </svg>
+        <img src="./logo.png" alt="logo" width="120" height="120">
       </div>
 
       <h1>WELCOME TO SKY MATKA GROUP</h1>
       <div class="tag">FULL TRUSTED MATKA APPLICATION</div>
-      <p class="hero-sub">Play safe, play smart — place bets on a variety of game panels and win cash prizes. All payouts are handled quickly and securely.</p>
+
+      <p class="hero-sub">
+        Play safe, play smart — place bets on a variety of game panels and win cash prizes.
+        All payouts are handled quickly and securely.
+      </p>
 
       <div>
         <div class="bonus-pill">
@@ -42,12 +35,18 @@
       </div>
 
       <div class="cta-row">
-        <a class="btn" href="#rates">⬇ Download App</a>
+        <!-- download buttons use data attrs and JS will set final href depending on device -->
+        <a class="btn download-btn" data-local="./matka.apk" data-remote="https://skymatka.online/redirect-play-store" id="hero-download">⬇ Download App</a>
+
         <a class="btn secondary" href="#contact">📞 Contact Us</a>
-        <a class="btn ghost" href="https://wa.me/">💬 WhatsApp</a>
+
+        <!-- WhatsApp: direct wa.me -->
+        <a class="btn whatsapp" href="https://wa.me/9950568613" rel="noopener" id="hero-whatsapp">
+          <img src="./what.png" alt="WhatsApp" width="20" height="20" aria-hidden="true"> WhatsApp
+        </a>
       </div>
 
-      <div class="info-pill">
+      <div class="info-pill" aria-hidden="true">
         <div class="info-item">🔒 100% Secure</div>
         <div class="info-item">⚡ Instant Results</div>
         <div class="info-item">₹ Fast Payouts</div>
@@ -55,38 +54,75 @@
     </div>
   </header>
 
+  <!-- RATES -->
   <section id="rates" class="section">
     <div class="container">
       <div class="title">Game Rates</div>
       <div class="subtitle">Premium gaming with competitive rates</div>
 
       <div class="rates-card">
-        <div class="rates-head">
+        <div class="rates-head" aria-hidden="true">
           <div>Game Type</div>
           <div class="center">Bet</div>
           <div class="center">Win</div>
         </div>
 
-        <div class="rates-body">
-          <div class="rate-row"><div class="rate-type">Ank</div><div class="rate-amount center">10</div><div class="rate-amount center">95 / --</div></div>
-          <div class="rate-row"><div class="rate-type">Jodi</div><div class="rate-amount center">10</div><div class="rate-amount center">950 / --</div></div>
-          <div class="rate-row"><div class="rate-type">Singal Panel</div><div class="rate-amount center">10</div><div class="rate-amount center">1400 / --</div></div>
-          <div class="rate-row"><div class="rate-type">Dubble Panel</div><div class="rate-amount center">10</div><div class="rate-amount center">2800 / --</div></div>
-          <div class="rate-row"><div class="rate-type">Tripple Panel</div><div class="rate-amount center">10</div><div class="rate-amount center">7000 / --</div></div>
-          <div class="rate-row"><div class="rate-type">Half Sangam</div><div class="rate-amount center">10</div><div class="rate-amount center">10000 / --</div></div>
-          <div class="rate-row"><div class="rate-type">Full Sangam</div><div class="rate-amount center">10</div><div class="rate-amount center">100000 / --</div></div>
+        <div class="rates-body" role="list">
+          <div class="rate-row" role="listitem">
+            <div class="rate-type">Ank</div>
+            <div class="rate-amount center">10</div>
+            <div class="rate-amount center">95 / --</div>
+          </div>
+
+          <div class="rate-row" role="listitem">
+            <div class="rate-type">Jodi</div>
+            <div class="rate-amount center">10</div>
+            <div class="rate-amount center">950 / --</div>
+          </div>
+
+          <div class="rate-row" role="listitem">
+            <div class="rate-type">Singal Panel</div>
+            <div class="rate-amount center">10</div>
+            <div class="rate-amount center">1400 / --</div>
+          </div>
+
+          <div class="rate-row" role="listitem">
+            <div class="rate-type">Dubble Panel</div>
+            <div class="rate-amount center">10</div>
+            <div class="rate-amount center">2800 / --</div>
+          </div>
+
+          <div class="rate-row" role="listitem">
+            <div class="rate-type">Tripple Panel</div>
+            <div class="rate-amount center">10</div>
+            <div class="rate-amount center">7000 / --</div>
+          </div>
+
+          <div class="rate-row" role="listitem">
+            <div class="rate-type">Half Sangam</div>
+            <div class="rate-amount center">10</div>
+            <div class="rate-amount center">10000 / --</div>
+          </div>
+
+          <div class="rate-row" role="listitem">
+            <div class="rate-type">Full Sangam</div>
+            <div class="rate-amount center">10</div>
+            <div class="rate-amount center">100000 / --</div>
+          </div>
         </div>
 
         <div class="note">Minimum bet starts from ₹5. Amounts may vary.</div>
       </div>
 
       <div class="big-cta">
-        <a class="btn" href="#download">▶ Start Playing Now</a>
+        <!-- these two also become download triggers (Start Playing -> same download behaviour) -->
+        <a class="btn download-btn" data-local="./matka.apk" data-remote="https://skymatka.online/redirect-play-store" id="rates-download">▶ Start Playing Now</a>
         <a class="btn secondary" href="#contact">📞 Contact Support</a>
       </div>
     </div>
   </section>
 
+  <!-- FEATURES -->
   <section class="section">
     <div class="container">
       <div class="title">Premium Features</div>
@@ -101,6 +137,7 @@
     </div>
   </section>
 
+  <!-- HOW TO PLAY -->
   <section class="section" style="background: rgba(43,82,136,0.03)">
     <div class="container">
       <div class="title">How to Play</div>
@@ -113,16 +150,32 @@
       </div>
 
       <div class="big-cta">
-        <a class="btn" href="#download">⬇ Download Now</a>
+        <a class="btn download-btn" data-local="./matka.apk" data-remote="https://skymatka.online/redirect-play-store">⬇ Download Now</a>
         <a class="btn secondary" href="#contact">📞 Contact Us</a>
-        <a class="btn ghost" href="https://wa.me/">💬 WhatsApp</a>
+        <a class="btn ghost whatsapp" href="https://wa.me/9950568613"><img src="./what.png" alt="WhatsApp" width="20" height="20" aria-hidden="true"> WhatsApp</a>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="section">
+    <div class="container">
+      <div class="title">Contact Us</div>
+      <div class="subtitle">Reach us directly</div>
+
+      <div style="max-width:720px;margin:0 auto;text-align:center">
+        <p class="muted">Phone: <a href="tel:9950568613" class="link-phone">9950568613</a></p>
+        <p class="muted">WhatsApp: <a href="https://wa.me/9950568613" target="_blank" rel="noopener" class="link-whatsapp">Chat on WhatsApp</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
   <footer>
     <div class="container foot-inner">
-      <div class="footer-logo">SM</div>
+      <div class="footer-logo" aria-hidden="true">
+        <img src="./logo.png" alt="logo" width="70" height="70">
+      </div>
       <small>© <span id="year"></span> Sky Matka Group. All rights reserved.</small>
     </div>
   </footer>
